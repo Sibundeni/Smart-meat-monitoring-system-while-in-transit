@@ -1,6 +1,6 @@
 # Smart Meat Monitoring System While in Transit
 
-This project is a real-time IoT-based monitoring system developed to ensure safe and efficient meat transportation. It uses an ESP32 microcontroller connected to multiple sensors to track temperature, humidity, motion, and light conditions inside a delivery truck. Data is transmitted via Wi-Fi to a Flask server, stored in a MySQL database, and accessed through a secure web dashboard for both real-time and historical analysis.
+This project is a real time IoT based monitoring system developed to ensure safe and efficient meat transportation. It uses an ESP32 microcontroller connected to multiple sensors to track temperature, humidity, motion, and light conditions inside a delivery truck. Data is transmitted via Wi-Fi to a Flask server, stored in a MySQL database, and accessed through a secure web dashboard for both real-time and historical analysis.
 
 ---
 
@@ -21,7 +21,7 @@ This project is a real-time IoT-based monitoring system developed to ensure safe
 - Real-time display and graph-based data visualization  
 - Timestamped logging of sensor readings in a structured database  
 - Organized HTML pages for each sensor and system function  
-- Simple hardware wiring and test-friendly enclosure design  
+- Simple hardware wiring and test friendly enclosure design  
 
 ---
 
@@ -37,7 +37,7 @@ This project is a real-time IoT-based monitoring system developed to ensure safe
 - `index.html`: Welcome page  
 - `login.html`: Login form  
 - `signup.html`: New user registration  
-- `admin.html`: Admin-only dashboard with graphs  
+- `admin.html`: Admin only dashboard with graphs  
 - `display.html`: All current sensor values in one place  
 - `temperature.html`: Internal temperature  
 - `temperature_out.html`: External temperature  
@@ -49,16 +49,16 @@ This project is a real-time IoT-based monitoring system developed to ensure safe
 
 ## Limitations
 
-Although this system performs well under standard conditions, there are certain limitations that should be considered. The monitoring relies on continuous Wi-Fi connectivity; in remote or signal-poor areas, data transmission may be interrupted. Since the system uses basic, low-cost sensors, the readings—while reliable for prototyping—may not meet strict industry calibration standards. Additionally, there is currently no battery backup, meaning that power outages or vehicle shutdowns will interrupt data collection. Lastly, the system does not yet support real-time alerts via SMS or mobile notifications, which limits proactive responses to emergencies.
+Although this system performs well under standard conditions, there are certain limitations that should be considered. The monitoring relies on continuous Wi-Fi connectivity; in remote or signal poor areas, data transmission may be interrupted. Since the system uses basic, low cost sensors, the readings while reliable for prototyping may not meet strict industry calibration standards. Additionally, there is currently no battery backup, meaning that power outages or vehicle shutdowns will interrupt data collection. Lastly, the system does not yet support real time alerts via SMS or mobile notifications, which limits proactive responses to emergencies.
 
 ---
 
 ## Future Improvements
-- Add GSM module for SMS alerts when thresholds are exceeded in remote areas  
-- Integrate GPS to track location alongside sensor data  
-- Develop a mobile app for remote live monitoring  
+- Add buzzer to notify the driver when motion is detected
+- Add light to switch on and off for LDR sensor
+- Develop a ventilator 
 - Include battery or solar backup to support the system during power failure  
-- Upgrade sensors to high-precision, food-industry standards  
+- Upgrade sensors to high precision, food industry standards  
 
 ---
 
@@ -79,6 +79,5 @@ This project helped me gain real-world experience in embedded system development
 
 **Author**: Sibundeni Sandile Ernest  
 **Project Type**: Final Year Practical Project – Engineering Programming 3 (EIENP3A)  
-**Institution**: Vaal University of Technology  
-**Team Members**: Mazibuko T., Nkgodi N.N., Malatji M.P., Mpata M.C  
+**Institution**: Vaal University of Technology   
 **Supervisor**: Mr. Dipo Ojo Seriki
