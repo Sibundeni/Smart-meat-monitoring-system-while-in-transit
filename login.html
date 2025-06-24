@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sensor Login</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="admin-pic" style="background-image: url('images/admin2.jpg');"></div>
+
+    <h2 id="login-title">Login</h2>
+  
+   <form action="/login" method="POST">
+    <input type="email" id="email" placeholder="Enter your email" name="email_address" required>
+    <input type="password" id="password" placeholder="Enter your password" name="password" required>
+    <button onclick="login()">LOGIN</button>
+    <p id="error" class="error"></p>
+    </form>
+  </div>
+  
+
+  <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motion Detector</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body class="motion">
+    <div class="container">
+        <h1>Infrared Sensor Monitoring</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Infrared Detection</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for time, H in zip_data %}
+                <tr>
+                    <td>{{ time }}</td>
+                    <td>{{ H }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <form method="POST">
+            <button type="submit" name="on" class="btn on">Turn ON</button>
+            <button type="submit" name="off" class="btn off">Turn OFF</button>
+        </form>
+
+        <p>Sensor Status: <strong class="sensor-status">ON</strong></p>
+        <p>Distance: <strong>32 cm</strong></p>
+        
+        <p class="alert">⚠️ Intruder detected!</p>
+
+        <!-- Example when OFF -->
+        <!-- <p>Sensor Status: <strong class="sensor-status">OFF</strong></p>
+        <p class="note">Sensor is currently off. Turn it on to monitor distance.</p> -->
+    </div>
+
+    <div class="back-btn">
+        <a href="/"><button type="button" class="btn btn-outline-primary">Back</button></a>
+    </div>
+</body>
+</html>

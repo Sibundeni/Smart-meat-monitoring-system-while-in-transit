@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humidity Dashboard</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body class="humidity">
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="logo">💧 Humidity</div>
+            <nav>
+                <ul>
+                    <li><a href="/Home">Home Page</a></li>
+                    <li class="active">Dashboard</li>
+                    <li>Analytics</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <h1>Humidity Dashboard</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Timestamp</th>
+                            <th>Current Humidity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for time, H in zip_data %}
+                        <tr>
+                            <td>{{ time }}</td>
+                            <td>{{ H }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <span class="timestamp">Updated: 19 Apr 2025, 10:45 AM</span>
+            </header>
+
+            <section class="grid">
+                <div class="card highlight">
+                    <h2>Current Humidity</h2>
+                    <p class="big">64%</p>
+                </div>
+
+                <div class="card">
+                    <h2>Sensor Status</h2>
+                    <ul>
+                        <li>Status: <span class="status-online">Online</span></li>
+                        <li>Location: Living Room</li>
+                    </ul>
+                </div>
+
+                <div class="card chart">
+                    <h2>Humidity Trend</h2>
+                    <div class="chart-placeholder">[ Chart Placeholder ]</div>
+                </div>
+
+                <div class="back-btn">
+                    <a href="/"><button type="button" class="btn btn-outline-primary">Back</button></a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

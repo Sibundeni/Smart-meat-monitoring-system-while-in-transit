@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="static/style.css" rel="stylesheet">
+</head>
+<body class="Sigup">
+  <div class="container">
+    <div class="signup-box">
+      <h2>SIGN UP </h2> <br>
+
+      <form method="POST" action="/signup">
+        <div >
+          
+        </div>
+
+        <div class="row">
+          
+
+          <input type="text" placeholder="Enter your first name" name="first_name" required>
+          <input type="text" placeholder="Enter your last name" name="last_name" required>
+          <input type="number" placeholder="Enter your student number" name="student_number" required>
+        </div>
+        
+        <br>
+        <input type="email" placeholder="Enter your email address" name="email_address" required>
+        <input type="password" placeholder="Enter your password" name="password" required>
+        <input type="password" placeholder="confim your password" name = "confirmpassword" required>
+        
+        <div>
+
+          <P>Sign up as:</P>
+          <label id="accounttype">Admin:</label>
+          <input type="radio" id="account_type" name="account_type" value="Admin">
+          <br>
+
+          <label id="accounttype">User:</label>
+          <input type="radio" id="account_type" name="account_type" value="user">
+        <br>
+        
+        </div>       
+
+        <button type="submit">SIGNUP</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+
+  
+
+</html>
+
+
+
+

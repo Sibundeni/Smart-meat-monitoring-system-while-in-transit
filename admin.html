@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Sensors</title>
+  <style>
+    /* Reset some basic styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    button {
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      padding: 12px 20px;
+      font-size: 1rem;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.35);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (min-width: 500px) {
+      form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      button {
+        margin: 5px;
+        flex: 1 1 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Sensor</h1>
+    <form action="/login" method="GET">
+      <button type="submit" name="sensor" value="TEMPERATURE_IN">TEMPERATURE_IN</button>
+      <button type="submit" name="sensor" value="TEMPERATURE_OUT">TEMPERATURE_OUT</button>
+      <button type="submit" name="sensor" value="LDR">LDR</button>
+      <button type="submit" name="sensor" value="INFRARED">INFRARED</button>
+      <button type="submit" name="sensor" value="HUMIDITY">HUMIDITY</button>
+    </form>
+  </div>
+</body>
+</html>

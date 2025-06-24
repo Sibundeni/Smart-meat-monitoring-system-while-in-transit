@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Control Panel</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <h1>Light Control Panel</h1>
+    
+    <table>
+        <caption>Light intensity Readings Over Time</caption>
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>LIGHT INTENSITY</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for time, H in zip_data %}
+            <tr>
+                <td>{{ time }}</td>
+                <td>{{ H }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="top-bar">
+        <p>Manage Your Lights</p>
+        <a href="/"><button type="button" class="btn btn-outline-danger">Log Out</button></a>
+    </div>
+
+    <span class="circle-badge">Current light intensity: 35</span>
+
+    <div class="status-msg">
+        <p class="darktext">It's <span class="dark">Dark</span> outside</p>
+        <p class="darktext">Switch <span class="on">ON</span> your light</p>
+        <div class="icon">🌙✨</div>
+    </div>
+
+    <div class="controls">
+        <div class="control">
+            <span class="text">The Whole House</span>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="control">
+            <span class="text">Sitting & Dining Room</span>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="control">
+            <span class="text">Kitchen</span>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="control">
+            <span class="text">Bedroom</span>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="back-btn">
+        <a href="/homepage"><button type="button" class="btn btn-outline-primary">Back</button></a>
+    </div>
+
+</body>
+</html>
