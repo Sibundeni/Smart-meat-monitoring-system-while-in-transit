@@ -33,7 +33,7 @@ This project is a real-time IoT-based monitoring system developed to ensure safe
 
 ---
 
-## 📸 Web Pages
+##  Web Pages
 - `index.html`: Welcome page  
 - `login.html`: Login form  
 - `signup.html`: New user registration  
